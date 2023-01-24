@@ -9,9 +9,6 @@ namespace DatabaseTask.Data.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Employee");
-
             migrationBuilder.CreateTable(
                 name: "Department",
                 columns: table => new
@@ -83,19 +80,6 @@ namespace DatabaseTask.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Ward");
-
-            migrationBuilder.CreateTable(
-                name: "Employee",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Employee", x => x.Id);
-                });
         }
     }
 }

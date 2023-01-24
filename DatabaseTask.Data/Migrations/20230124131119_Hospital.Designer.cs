@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DatabaseTask.Data.Migrations
 {
     [DbContext(typeof(DatabaseTaskDbContext))]
-    [Migration("20230124130805_Hospital")]
+    [Migration("20230124131119_Hospital")]
     partial class Hospital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
